@@ -4,12 +4,13 @@
 
 ### dplyr 
 
-`slice(1L)` for getting the max value of each group (MIGHT HAVE TO ADD SOMETHING TO ARRANGE) with
+`slice(1L)` for getting the max value of each group
 
 ```
 grouped_data <- data %>% 
   group_by(variable, group_vars) %>%
-  
+  summarize(values = sum(values)) %>%
+  mutate(grp = cur_group_id()) %>% 
   arrange(-n) %>% 
   slice(1L)
 ```
@@ -46,6 +47,87 @@ barp.obj <- barp(y = "supp_gaymar",
 
 > The resulting `barp` object summarizes the predicted opinions and bounds as a `data.frame`. Plotting the `barp` object will return either a simple plot of the predicted values and credible intervals (`evaluate_model = FALSE`, the default), or a set of convergence diagnostic plots (`evaluate_model = TRUE`). The latter plot should exhibit relative stability across the post-burn-in Markov Chain Monte Carlo (MCMC) simulations in terms of percent acceptance, number of leafs and terminal nodes, and tree depth (and $\sigma^2$ when $y$ is not a factor).
 
+### MRP 
+
+
+### MRSP 
+
+### {survey}: The OG Package...probably? 
+
+This was the easiest to port between Stata and R but it's been a while since I've run this code from the CIS: 
+
+```
+svy1 <- survey::svydesign(ids = ~psu+ssu+caseid, data = df)
+pop.types <- data.frame(type=df$poststrata, Freq=df$postratasize)
+pop.types <- pop.types[!duplicated(pop.types), ]
+post <- data.frame(type=df$poststrata)
+postsvy<- survey::postStratify(design = svy1, strata = post, population = pop.types)
+```
 ### {srvyr}: Survey but make it tidy 
 
-### {survey}: The survey stuff 
+Replicable code illustrated by a [comparison between {survey} and {srvyr} syntax](https://rdrr.io/cran/srvyr/f/vignettes/extending-srvyr.Rmd)
+
+Setup for replicable code $\downarrow$
+
+```
+# S3 generic function
+survey_gini <- function(
+  x, na.rm = FALSE, vartype = c("se", "ci", "var", "cv"), ...
+) {
+  if (missing(vartype)) vartype <- "se"
+  vartype <- match.arg(vartype, several.ok = TRUE)
+  .svy <- srvyr::set_survey_vars(srvyr::cur_svy(), x)
+
+  out <- convey::svygini(~`__SRVYR_TEMP_VAR__`, na.rm = na.rm, design = .svy)
+  out <- srvyr::get_var_est(out, vartype)
+  out
+}
+```
+
+Full code comparing syntax between {srvyr} and {survey} 
+
+```
+# Example from ?convey::svygini
+suppressPackageStartupMessages({
+  library(srvyr)
+  library(survey)
+  library(convey)
+  library(laeken)
+})
+data(eusilc) ; names( eusilc ) <- tolower( names( eusilc ) )
+
+# Setup for survey package
+des_eusilc <- svydesign(
+  ids = ~rb030, 
+  strata = ~db040,  
+  weights = ~rb050, 
+  data = eusilc
+)
+des_eusilc <- convey_prep(des_eusilc)
+
+# Setup for srvyr package
+srvyr_eusilc <- eusilc %>% 
+  as_survey(
+    ids = rb030,
+    strata = db040,
+    weights = rb050
+  ) %>%
+  convey_prep()
+
+## Ungrouped
+# Calculate ungrouped for survey package
+svygini(~eqincome, design = des_eusilc)
+
+# Use new function from summarize
+srvyr_eusilc %>% 
+  summarize(eqincome = survey_gini(eqincome))
+
+## Groups
+# Calculate by groups for survey
+survey::svyby(~eqincome, ~rb090, des_eusilc, convey::svygini)
+
+# Use new function from summarize
+srvyr_eusilc %>% 
+  group_by(rb090) %>%
+  summarize(eqincome = survey_gini(eqincome))
+```
