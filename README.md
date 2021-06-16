@@ -15,6 +15,24 @@ grouped_data <- data %>%
   slice(1L)
 ```
 
+### ggplot2 (+ addins)
+
+### geom_bernie() 
+
+Instantly saves plots (or something)
+
+Install
+
+```
+remotes::install_github("R-CoderDotCom/ggbernie@main")
+```
+
+Geom 
+
+```
+geom_bernie(aes(x = 1930, y = 20100), bernie = "sitting")
+```
+
 ## Poststratification  
 
 ### {survey}: The OG Package...probably? 
