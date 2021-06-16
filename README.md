@@ -8,7 +8,15 @@
 
 ```
 grouped_data <- data %>% 
-  count(variable) %>% 
+  group_by(variable, group_vars) %>%
+  
   arrange(-n) %>% 
   slice(1L)
 ```
+
+## Poststratification with survey data 
+
+Packages (from favorite to the other ones): 
+
+- {BARP}: MRP + Bayesian Additive Regression Trees (+ other ML algorithms via `SuperLearner`
+- {srvyr}: 
