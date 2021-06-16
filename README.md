@@ -1,4 +1,4 @@
-# helpful-codestuff
+(Thanks to [Katherine Keith](https://github.com/kakeith) for the inspiration!)
 
 ## Tidyverse 
 
