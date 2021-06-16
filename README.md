@@ -27,6 +27,12 @@ Install
 remotes::install_github("R-CoderDotCom/ggbernie@main")
 ```
 
+### Alt Text Generator 
+
+```
+devtools::install_github("spcanelon/TidyTuesdayAltText
+```
+
 Geom 
 
 ```
