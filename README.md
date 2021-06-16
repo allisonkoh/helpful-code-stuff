@@ -1,4 +1,4 @@
-(Thanks to [Katherine Keith](https://github.com/kakeith) for the inspiration!)
+<!-- (Thanks to [Katherine Keith](https://github.com/kakeith) for the inspiration!) -->
 
 ## Tidyverse 
 
@@ -15,7 +15,7 @@ grouped_data <- data %>%
   slice(1L)
 ```
 
-### ggplot2 (+ addins)
+### ggplot2 
 
 ### geom_bernie() 
 
@@ -37,6 +37,17 @@ Geom
 
 ```
 geom_bernie(aes(x = 1930, y = 20100), bernie = "sitting")
+```
+
+### Palette from picture with {paletteR}
+
+https://datascienceplus.com/how-to-use-paletter-to-automagically-build-palettes-from-pictures/
+
+```
+devtools::install_github("andreacirilloac/paletter")
+create_palette(image_path = "~/Desktop/410px-Piero_della_Francesca_046.jpg",
+               number_of_colors =20,
+               type_of_variable = “categorical")
 ```
 
 ## Poststratification  
