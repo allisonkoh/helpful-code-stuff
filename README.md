@@ -32,7 +32,7 @@ postsvy<- survey::postStratify(design = svy1, strata = post, population = pop.ty
 
 Replicable code illustrated by a [comparison between {survey} and {srvyr} syntax](https://rdrr.io/cran/srvyr/f/vignettes/extending-srvyr.Rmd)
 
-Setup for replicable code $\downarrow$
+Setup for replicable code vvv 
 
 ```
 # S3 generic function
@@ -140,6 +140,8 @@ barp.obj <- barp(y = "supp_gaymar",
 Developers: Broniecki, Leeman & Wüest 
 
 Link to paper on CRAN: https://cran.r-project.org/web/packages/autoMrP/vignettes/autoMrP_vignette.pdf
+
+Baselines and packages used vvv 
 
 > The results in this paper were obtained using R 4.0.2 with the dplyr 1.0.2, foreach 1.5.0, doParallel 1.0.15, doRNG 1.8.2, magittr 1.5, lme4 1.1-23, glmnet 4.0-2, ranger 0.12.1, kknn 1.3.1,
 xgboost 1.2.0.1, caret 6.0-86, SRP 0.1.1, BARP 0.0.1.0001 and autoMrP 0.91 packages. R
