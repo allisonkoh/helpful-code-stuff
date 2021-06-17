@@ -54,10 +54,12 @@ create_palette(image_path = "~/Desktop/410px-Piero_della_Francesca_046.jpg",
                type_of_variable = “categorical")
 ```
 
-## Spatial Data Stuff 
+<!-- ## Spatial Data Stuff  -->
 
-- Get country from latitude and longitude: https://cran.r-project.org/web/packages/tidygeocoder/tidygeocoder.pdf
-- Reverse geocoding (i.e. lat long to country) sans API: https://cran.r-project.org/web/packages/revgeo/revgeo.pdf 
+<!--Add useful insights from spatial data viz from June 16, 2021 -->
+
+<!-- - Get country from latitude and longitude: https://cran.r-project.org/web/packages/tidygeocoder/tidygeocoder.pdf -->
+<!-- - Reverse geocoding (i.e. lat long to country) sans API: https://cran.r-project.org/web/packages/revgeo/revgeo.pdf -->
 
 ## Poststratification  
 
