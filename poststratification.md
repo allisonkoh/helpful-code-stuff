@@ -83,11 +83,15 @@ srvyr_eusilc %>%
 
 ## MRP
 
+MRP = Multilevel Regression and Poststratification. Also known as "Mister P"
+
 Replication code from Lucas Leeman's MRP example here: https://github.com/lleemann/MrP_chapter/blob/master/ExampleCode.R
 
 Handout in PDF form from Leeman & Wasserfallen 2018: https://github.com/lleemann/MrP_chapter/blob/master/MrP_Illsutration.pdf
 
 ## MRSP
+
+MRSP = Multilevel Regression and Synthetic Poststratification. Also known as Mister P's better half, "Mrs. P" 
 
 ## [{BARP}](https://github.com/jbisbee1/BARP/): MRP + Bayesian Additive Regression Trees (+ other ML algorithms via `SuperLearner`)
 
