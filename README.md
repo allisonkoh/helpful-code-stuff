@@ -53,7 +53,7 @@ create_palette(image_path = "~/Desktop/410px-Piero_della_Francesca_046.jpg",
 ## Spatial Data Stuff 
 
 - Get country from latitude and longitude: https://cran.r-project.org/web/packages/tidygeocoder/tidygeocoder.pdf
-- Lat long to country: geonames package 
+- Lat long to country: [geonames](https://cran.r-project.org/web/packages/geonames/geonames.pdf) package 
 
 ## Poststratification  
 
