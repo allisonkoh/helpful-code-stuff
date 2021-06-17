@@ -50,6 +50,10 @@ create_palette(image_path = "~/Desktop/410px-Piero_della_Francesca_046.jpg",
                type_of_variable = “categorical")
 ```
 
+## Spatial Data Stuff 
+
+- Get country from latitude and longitude: https://cran.r-project.org/web/packages/tidygeocoder/tidygeocoder.pdf
+
 ## Poststratification  
 
 ### {survey}: The OG Package...probably? 
