@@ -35,7 +35,7 @@ geom_bernie(aes(x = 1930, y = 20100), bernie = "sitting")
 
 ### Alt Text Examples 
 
-Ideal to use alt text when posting dataviz on social media to make your posts more accessible :D This package contains examples of AltText 
+Ideal to use alt text when posting dataviz on social media to make your posts more accessible :D This package contains examples of AltText from #TidyTuesday posts between 2019 and 2021. 
 
 A future version of this package will include an annotated dataset of alt text + ratings according to feature: https://twitter.com/spcanelon/status/1405488036989870080. Until it is integrated into the package, the data can be found here: https://github.com/spcanelon/csvConf2021/blob/main/data/annotatedRubric1.csv
 
