@@ -19,7 +19,7 @@ grouped_data <- data %>%
 
 ### geom_bernie() 
 
-Instantly saves plots (or something)
+Instantly improves any plot (or something)
 
 Install
 
@@ -27,16 +27,20 @@ Install
 remotes::install_github("R-CoderDotCom/ggbernie@main")
 ```
 
-### Alt Text Generator 
-
-```
-devtools::install_github("spcanelon/TidyTuesdayAltText
-```
-
 Geom 
 
 ```
 geom_bernie(aes(x = 1930, y = 20100), bernie = "sitting")
+```
+
+### Alt Text Examples 
+
+Ideal to use alt text when posting dataviz on social media to make your posts more accessible :D This package contains examples of AltText 
+
+A future version of this package will include an annotated dataset of alt text + ratings according to feature: https://twitter.com/spcanelon/status/1405488036989870080. Until it is integrated into the package, the data can be found here: https://github.com/spcanelon/csvConf2021/blob/main/data/annotatedRubric1.csv
+
+```
+devtools::install_github("spcanelon/TidyTuesdayAltText
 ```
 
 ### Palette from picture with {paletteR}
@@ -57,7 +61,7 @@ create_palette(image_path = "~/Desktop/410px-Piero_della_Francesca_046.jpg",
 
 ## Poststratification  
 
-### {survey}: The OG Package...probably? 
+### {survey}: The original Package...probably? 
 
 This was the easiest to port between Stata and R but it's been a while since I've run this code from the CIS: 
 
