@@ -93,6 +93,10 @@ Handout in PDF form from Leeman & Wasserfallen 2018: https://github.com/lleemann
 
 MRSP = Multilevel Regression and Synthetic Poststratification. Also known as Mister P's better half, "Mrs. P" 
 
+Joseph Ornstein wrote a paper introducing the method: https://sites.lsa.umich.edu/ornstein/wp-content/uploads/sites/157/2017/09/mrsp.pdf 
+
+It might have replication data; not sure. 
+
 ## [{BARP}](https://github.com/jbisbee1/BARP/): MRP + Bayesian Additive Regression Trees (+ other ML algorithms via `SuperLearner`)
 
 The main parameters used by the `barp` function include:
