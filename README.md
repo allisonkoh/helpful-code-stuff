@@ -1,5 +1,7 @@
 <!-- (Thanks to [Katherine Keith](https://github.com/kakeith) for the inspiration!) -->
 
+# `R`
+
 ## dplyr
 
 `slice(1L)` for getting the max value of each group
@@ -21,9 +23,8 @@ grouped_data <- data %>%
 
 ### Themes
 
-SET THEME AT THE TOP OF THE SCRIPT. IT WILL MAKE YOUR LIFE EASIER. STOP FORGETTING TO DO THAT.
-
 This is the `theme_set()` that I might use for now.
+
 ```
 # add fonts (this might not be a necessary step)
 font_add_google(name = "Fira Sans", family = "fira")
@@ -66,6 +67,22 @@ str_wrap_factor <- function(x, ...) {
   levels(x) <- str_wrap(levels(x), ...)
   x
 }
+```
+
+How to customize which legends are shown based on aesthetic: `guides()`. Example:
+
+```
+data %>%
+  ggplot(aes(x = type, y = fct_rev(abb), size = n, color = n)) +
+  geom_point() +
+  labs(
+    title = "TITLE",
+    x = "",
+    y = "",
+    color = "",
+    caption = "Data Source: DATA_SOURCE\nVisualization: Allison Koh"
+    ) +
+    guides(size = "none")
 ```
 
 ### Fonts
@@ -158,7 +175,13 @@ create_palette(image_path = "~/Desktop/410px-Piero_della_Francesca_046.jpg",
 <!-- - Get country from latitude and longitude: https://cran.r-project.org/web/packages/tidygeocoder/tidygeocoder.pdf -->
 <!-- - Reverse geocoding (i.e. lat long to country) sans API: https://cran.r-project.org/web/packages/revgeo/revgeo.pdf -->
 
-## Poststratification  
+### Test palette with `pie()` function
+
+```
+pie(rep(1, 13), col=pal)
+```
+
+## Poststratification
 
 ### {survey}: The original Package...probably?
 
@@ -207,7 +230,7 @@ data(eusilc) ; names( eusilc ) <- tolower( names( eusilc ) )
 # Setup for survey package
 des_eusilc <- svydesign(
   ids = ~rb030,
-  strata = ~db040,  
+  strata = ~db040,
   weights = ~rb050,
   data = eusilc
 )
@@ -292,3 +315,25 @@ itself and all packages except SRP, BARP, and autoMrP used are available from th
 is available on GitHub at https://github.com/joeornstein/SRP, BARP is available on
 GitHub at https://github.com/jbisbee1/BARP, and autoMrP is availalbe on GitHub at
 https://github.com/retowuest/autoMrP.
+
+# LaTeX
+
+## Beamer
+
+For adjusting vertical alignment of text in the template
+
+```
+\documentclass[10pt,professionalfonts,t]{beamer}
+```
+
+Get rid of the `t` to revert to vertically centering text.
+
+# Other
+
+## Source Code Images
+
+The site for creating images of source code is https://carbon.now.sh/.
+
+## Palette Sites
+
+- https://coolors.co/
