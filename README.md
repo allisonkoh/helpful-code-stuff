@@ -337,3 +337,4 @@ The site for creating images of source code is https://carbon.now.sh/.
 ## Palette Sites
 
 - https://coolors.co/
+- https://pokepalettes.com/
