@@ -316,7 +316,7 @@ is available on GitHub at https://github.com/joeornstein/SRP, BARP is available 
 GitHub at https://github.com/jbisbee1/BARP, and autoMrP is availalbe on GitHub at
 https://github.com/retowuest/autoMrP.
 
-# LaTeX
+# LaTeX (incl. knitr for Rmd stuff)
 
 ## Beamer
 
@@ -338,3 +338,13 @@ The site for creating images of source code is https://carbon.now.sh/.
 
 - https://coolors.co/
 - https://pokepalettes.com/
+
+## knitr
+
+Add figure to slide
+
+```
+```{r figure-name, echo = F, out.width = '100%', fig.cap = "Source: SOURCE HERE"}
+knitr::include_graphics(here("figures", "Figure.jpeg"))
+```
+```
