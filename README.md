@@ -19,6 +19,28 @@ grouped_data <- data %>%
 
 `replace_na()` for recoding NA values in variables
 
+Do you want counts of variables in groups without deleting all the other variables? Use `mutate()` after `group_by()` instead of summarize. Then subset accordingly. e.g.:
+
+```
+df %>%
+  group_by(country_person) %>%
+  mutate(
+    n_articles_total = n(),
+    n_articles_before = sum(before_appoint==1),
+    n_articles_after = n_articles_total - n_articles_before,
+    n_lang_en = sum(lang_en==1),
+    n_lang_other = n_articles_total - n_lang_en,
+    av_text_length = mean(length)
+  )
+
+df_tidy_subset <- df %>%
+  select(
+    id, country_person, n_articles_total, n_articles_before,
+    n_articles_after, n_lang_en, n_lang_other, av_text_length
+  ) %>%
+  unique() # rm duplicates
+```
+
 ## ggplot2
 
 ### Themes
@@ -315,6 +337,12 @@ itself and all packages except SRP, BARP, and autoMrP used are available from th
 is available on GitHub at https://github.com/joeornstein/SRP, BARP is available on
 GitHub at https://github.com/jbisbee1/BARP, and autoMrP is availalbe on GitHub at
 https://github.com/retowuest/autoMrP.
+
+# Python
+
+## Pandas
+
+## Numpy
 
 # LaTeX (incl. knitr for Rmd stuff)
 
