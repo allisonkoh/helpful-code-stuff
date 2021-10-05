@@ -41,6 +41,18 @@ df_tidy_subset <- df %>%
   unique() # rm duplicates
 ```
 
+## String/character vector manipulation (general philosophy: avoid regex whenever possible 😅)
+
+Remove all characters that are non-numeric: `STRING <- str_remove_all(STRING, "\\D+")`
+
+Extract substring between two strings: `qdapRegex::ex_between()`
+
+## purrr
+
+### map
+
+On reading in multiple files and combining result of a function into a data frame:  https://clauswilke.com/blog/2016/06/13/reading-and-combining-many-tidy-data-files-in-r/
+
 ## ggplot2
 
 ### Themes
