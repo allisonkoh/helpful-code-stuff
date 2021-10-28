@@ -41,7 +41,13 @@ df_tidy_subset <- df %>%
   unique() # rm duplicates
 ```
 
-## String/character vector manipulation (general philosophy: avoid regex whenever possible 😅)
+__id numbers within groups__
+
+```
+df %>% group_by(cat) %>% mutate(id = row_number())
+```
+
+## String/character vector manipulation (my general philosophy: avoid pure regex whenever possible 😅)
 
 Remove all characters that are non-numeric: `STRING <- str_remove_all(STRING, "\\D+")`
 
