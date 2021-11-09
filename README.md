@@ -59,7 +59,22 @@ Extract substring between two strings: `qdapRegex::ex_between()`
 
 On reading in multiple files and combining result of a function into a data frame:  https://clauswilke.com/blog/2016/06/13/reading-and-combining-many-tidy-data-files-in-r/
 
+## lubridate (/working with dates in general)
+
+Create date object from year and month columns with `ym()` function (goes for a bunch of different ymd combinations as well). e.g.: 
+
+```
+df %>%
+  mutate(
+    date = ym(paste(Year, Month))
+  )
+```
+
+There's also a vector of
+
 ## ggplot2
+
+If you're a Python user, stick to the Grammar of Graphics and use the [plotnine](https://plotnine.readthedocs.io/en/stable/) library for visualization :D
 
 ### Themes
 
