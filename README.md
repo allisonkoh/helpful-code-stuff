@@ -2,6 +2,14 @@
 
 # `R`
 
+## package management if(!require("pacman")) install.packages("pacman")
+
+My preferred package for package management is `pacman`. Before loading in dependencies, put this at the top of the script 
+
+```
+if(!require("pacman")) install.packages("pacman")
+```
+
 ## dplyr
 
 `slice(1L)` for getting the max value of each group
