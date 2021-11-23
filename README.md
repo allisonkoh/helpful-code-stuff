@@ -2,7 +2,7 @@
 
 # `R`
 
-## package management if(!require("pacman")) install.packages("pacman")
+## package management 
 
 My preferred package for package management is `pacman`. Before loading in dependencies, put this at the top of the script 
 
