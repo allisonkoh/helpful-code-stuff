@@ -246,17 +246,13 @@ pie(rep(1, 13), col=pal)
 
 # Python
 
-## Pandas
-
-## Numpy
-
 ## Twarc 
 
 twarc is a command line tool and Python library for collecting and archiving Twitter JSON data via the Twitter API. It has separate commands (twarc and twarc2) for working with the older v1.1 API and the newer v2 API and Academic Access (respectively).
 
 Docs: https://github.com/DocNow/twarc 
 
-To convert the file from 
+You have to separately install `twarc-csv` to convert jsonl output to csv in the CLI. (What I use: Anaconda/Powershell CLI) 
 
 Workflow for extracting tweets using this Python library, and converting the resulting file to CSV. 
 
