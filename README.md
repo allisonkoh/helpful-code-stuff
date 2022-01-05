@@ -385,6 +385,22 @@ https://github.com/retowuest/autoMrP.
 
 ## Numpy
 
+## Twarc 
+
+twarc is a command line tool and Python library for collecting and archiving Twitter JSON data via the Twitter API. It has separate commands (twarc and twarc2) for working with the older v1.1 API and the newer v2 API and Academic Access (respectively).
+
+Docs: https://github.com/DocNow/twarc 
+
+To convert the file from 
+
+Workflow for extracting tweets using this Python library, and converting the resulting file to CSV. 
+
+```
+cd "C:\datadir\path" 
+twarc2 search --archive "search term" tweets.jsonl 
+twarc2 csv tweets.jsonl output.csv
+```
+
 # LaTeX (incl. knitr for Rmd stuff)
 
 ## Beamer
