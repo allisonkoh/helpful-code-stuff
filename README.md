@@ -251,6 +251,7 @@ pie(rep(1, 13), col=pal)
 twarc is a command line tool and Python library for collecting and archiving Twitter JSON data via the Twitter API. It has separate commands (twarc and twarc2) for working with the older v1.1 API and the newer v2 API and Academic Access (respectively).
 
 Docs: https://github.com/DocNow/twarc 
+More docs: https://scholarslab.github.io/learn-twarc/06-twarc-command-basics
 
 You have to separately install `twarc-csv` to convert jsonl output to csv in the CLI. (What I use: Anaconda/Powershell CLI) 
 
@@ -261,6 +262,8 @@ cd "C:\datadir\path"
 twarc2 search --archive "search term" tweets.jsonl 
 twarc2 csv tweets.jsonl output.csv
 ```
+
+How to stop tweet collection: **Ctrl + C** 
 
 # LaTeX (incl. knitr for Rmd stuff)
 
