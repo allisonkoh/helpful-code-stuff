@@ -250,7 +250,7 @@ pie(rep(1, 13), col=pal)
 
 ## File management with `pathlib`
 
-Use `pathlib` for relative paths in Python. 
+Use `pathlib` for relative paths in Python.  Docs: https://docs.python.org/3/library/pathlib.html
 
 Stuff to import at the top of the script/NB 
 
@@ -259,7 +259,7 @@ import pathlib
 from pathlib import Path
 ```
 
-The following lines of code identify a working directory and prints directory name/parent directory. 
+The following lines of code identify a working directory and prints directory name/parent directory.
 
 ```
 path = Path.cwd()
