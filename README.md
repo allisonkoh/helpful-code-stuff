@@ -84,7 +84,7 @@ There's also a vector of
 
 ## ggplot2
 
-If you're a Python user, stick to the Grammar of Graphics and use the [plotnine](https://plotnine.readthedocs.io/en/stable/) library for visualization :D
+If you're a 0 user, stick to the Grammar of Graphics and use the [plotnine](https://plotnine.readthedocs.io/en/stable/) library for visualization :D
 
 ### Themes
 
@@ -247,6 +247,25 @@ pie(rep(1, 13), col=pal)
 ```
 
 # Python
+
+## File management with `pathlib`
+
+Use `pathlib` for relative paths in Python. 
+
+Stuff to import at the top of the script/NB 
+
+```
+import pathlib 
+from pathlib import Path
+```
+
+The following lines of code identify a working directory and prints directory name/parent directory. 
+
+```
+path = Path.cwd()
+print(path)
+print(path.parent)
+```
 
 ## Twarc 
 
