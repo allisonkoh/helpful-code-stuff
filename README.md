@@ -267,6 +267,13 @@ print(path)
 print(path.parent)
 ```
 
+**Joining paths**: In my workflow, I normally keep the working directory as my code folder and specify the path for storing data collected using relative paths. The following code specifies a path and specifies the file path for the data subdirectory of a project. 
+
+```
+code_path = Path.cwd()
+data_path = Path(path.parent, 'data')
+```
+
 ## Twarc 
 
 twarc is a command line tool and Python library for collecting and archiving Twitter JSON data via the Twitter API. It has separate commands (twarc and twarc2) for working with the older v1.1 API and the newer v2 API and Academic Access (respectively).
