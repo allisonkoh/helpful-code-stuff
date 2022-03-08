@@ -14,6 +14,8 @@ if(!require("pacman")) install.packages("pacman")
 
 Useful functions that I am constantly forgetting: `na_if` and `rowwise()` (group_by for rows)
 
+NOTE: Don't get stuck in the trap of doing row-wise operations if pivoting makes more sense! 
+
 `slice(1L)` for getting the max value of each group
 
 ```
