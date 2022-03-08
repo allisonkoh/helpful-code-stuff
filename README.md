@@ -12,6 +12,8 @@ if(!require("pacman")) install.packages("pacman")
 
 ## dplyr
 
+Useful functions that I am constantly forgetting: `na_if` and `rowwise()` (group_by for rows)
+
 `slice(1L)` for getting the max value of each group
 
 ```
