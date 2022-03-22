@@ -252,6 +252,16 @@ pie(rep(1, 13), col=pal)
 
 # Python
 
+## Setting up virtual environments in the CLI 
+
+It's *way* easier than I thought it was... 
+
+```
+conda create --name ENVNAME python=3.9.7
+conda activate ENVNAME
+conda deactivate ENVNAME
+```
+
 ## IDE stuff 
 
 - Jupyter notebook is normally my go-to, especially if collaborators are comfortable working with Github. 
