@@ -262,6 +262,12 @@ conda activate ENVNAME
 conda deactivate ENVNAME
 ```
 
+Every time you make a new environment, *don't forget to install git!* For my CLI (Anaconda Powershell Prompt):
+
+```
+conda install git
+```
+
 ## IDE stuff 
 
 - Jupyter notebook is normally my go-to, especially if collaborators are comfortable working with Github. 
