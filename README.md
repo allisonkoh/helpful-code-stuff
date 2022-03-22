@@ -313,6 +313,10 @@ twarc2 csv tweets.jsonl output.csv
 
 How to stop tweet collection: **Ctrl + C** 
 
+## Twint 
+
+As of **March 22, 2022**: Make sure python version is 3.6! (use separate venv just for twint purposes)
+
 # LaTeX (incl. knitr for Rmd stuff)
 
 ## Beamer
