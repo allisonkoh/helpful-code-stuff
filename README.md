@@ -12,6 +12,9 @@ if(!require("pacman")) install.packages("pacman")
 
 ## dplyr
 
+Combine with `purrr::map` to read in multiple csvs to one data frame 
+https://www.mjandrews.org/blog/readmultifile/
+
 Useful functions that I am constantly forgetting: `na_if` and `rowwise()` (group_by for rows)
 
 NOTE: Don't get stuck in the trap of doing row-wise operations if pivoting makes more sense! 
