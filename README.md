@@ -86,8 +86,25 @@ df %>%
     date = ym(paste(Year, Month))
   )
 ```
+## Working with Twitter Data 
 
-There's also a vector of
+I collect my data using the `twarc` Python package, but work with my data in `R`. See code below as an example for wrangling the JSON strings from `entities` variables. 
+
+You might have to make things more complex if you want to also add where tweets came from, but hopefully the snippet below provides a good starting point! 
+
+```
+tweets_entities <- tweets %>% 
+  filter(entities.annotations != "") %>% # for some reason drop_na not working
+  mutate(entities.annotations = gsub("\"\"", "\"", entities.annotations)) 
+
+entities <- map(tweets_entities$entities.annotations, fromJSON) %>% 
+  bind_rows() %>% 
+  select("type", "normalized_text") %>% 
+  distinct()
+
+people <- entities %>% 
+  filter(type == "Person")
+```
 
 ## ggplot2
 
