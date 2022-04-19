@@ -341,7 +341,9 @@ How to stop tweet collection: **Ctrl + C**
 
 ## Twint 
 
-As of **March 22, 2022**: Make sure python version is 3.6! (use separate venv just for twint purposes)
+Github repo: https://github.com/twintproject/twint
+
+There have been some issues with twint lately, biggest issue is only being able to scrape a sample of tweets at a time. There are some fixes for it, depending on your OS and CLI. 
 
 # LaTeX (incl. knitr for Rmd stuff)
 
