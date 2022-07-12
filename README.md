@@ -274,18 +274,22 @@ pie(rep(1, 13), col=pal)
 
 ## Setting up virtual environments in the CLI 
 
-It's *way* easier than I thought it was... 
-
 ```
 conda create --name ENVNAME python=3.9.7
 conda activate ENVNAME
 conda deactivate ENVNAME
 ```
-
-Every time you make a new environment, *don't forget to install git!* For my CLI (Anaconda Powershell Prompt):
+Every time you make a new environment, *don't forget to install git!* For my CLI (Anaconda Powershell Prompt for Windows 11):
 
 ```
 conda install git
+```
+
+## `pandas`
+
+Set default format for displaying numbers; rounding to the nearest number 
+```
+pd.options.display.float_format = '{:.0f}'.format
 ```
 
 ## IDE stuff 
