@@ -298,6 +298,10 @@ pd.options.display.float_format = '{:.0f}'.format
 - If browser-based IDEs aren't your favorite, [Jupyter Ascending](https://generallyintelligent.ai/open-source/2021-10-14-jupyter-ascending/) seems like a good option for using a text editor of your choice to generate Jupyter notebooks. 
 - Colab is another common tool used; it's not my preference given the workflow for file management, etc. is very different. 
 
+## PyTorch for Text Classification
+
+Useful resource comparing old torchtext (legacy) to new torchtext: https://lightrun.com/answers/pytorch-text-overview-of-issues-in-torchtext-and-the-plan-for-revamping 
+
 ## File management with `pathlib`
 
 Use `pathlib` for relative paths in Python.  Docs: https://docs.python.org/3/library/pathlib.html
