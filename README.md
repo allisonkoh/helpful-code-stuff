@@ -270,6 +270,16 @@ create_palette(image_path = "~/Desktop/410px-Piero_della_Francesca_046.jpg",
 pie(rep(1, 13), col=pal)
 ```
 
+## Combining PDFs 
+
+https://stackoverflow.com/questions/17552917/merging-existing-pdf-files-using-r 
+
+```
+install.packages("qpdf")
+qpdf::pdf_combine(input = c("file.pdf", "file2.pdf", "file3.pdf"),
+                  output = "output.pdf")
+```
+
 # Python
 
 ## Setting up virtual environments in the CLI 
