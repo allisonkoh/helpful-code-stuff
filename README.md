@@ -9,6 +9,11 @@ My preferred package for package management is `pacman`. Before loading in depen
 ```
 if(!require("pacman")) install.packages("pacman")
 ```
+## file/path management 
+
+I use the `here()` package for file/path management. 
+
+To reset home path (tidyverse equivalent of `setwd()`): 
 
 ## dplyr
 
