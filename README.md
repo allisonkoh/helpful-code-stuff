@@ -13,7 +13,7 @@ if(!require("pacman")) install.packages("pacman")
 
 I use the `here()` package for file/path management. 
 
-To reset home path (tidyverse equivalent of `setwd()`): 
+To reset home path (tidyverse equivalent of `setwd()`): `set_here()`. It's a superseded function, but I don't really like the replacement 
 
 ## dplyr
 
