@@ -1,5 +1,11 @@
 <!-- (Thanks to [Katherine Keith](https://github.com/kakeith) for the inspiration!) -->
 
+# Quarto 
+
+## Add in fontawesome icons 
+
+The `quarto-ext/fontawesome` extension has to be installed with every new project (at least for now). Quick tutorial for this: https://www.youtube.com/watch?v=u8EOVOjX13Y 
+
 # `R`
 
 ## package management 
