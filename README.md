@@ -8,6 +8,10 @@ The `quarto-ext/fontawesome` extension has to be installed with every new projec
 
 # `R`
 
+## base 
+
+Preventing scientific notation: https://stackoverflow.com/questions/25946047/how-to-prevent-scientific-notation-in-r 
+
 ## package management 
 
 My preferred package for package management is `pacman`. Before loading in dependencies, put this at the top of the script 
