@@ -2,6 +2,10 @@
 
 # Quarto 
 
+## General resources 
+
+- A Quarto tip a day by Mine Cetinkaya-Rundel: https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/
+
 ## Add in fontawesome icons 
 
 The `quarto-ext/fontawesome` extension has to be installed with every new project (at least for now). Quick tutorial for this: https://www.youtube.com/watch?v=u8EOVOjX13Y 
