@@ -127,7 +127,11 @@ people <- entities %>%
 
 ## ggplot2
 
-If you're a 0 user, stick to the Grammar of Graphics and use the [plotnine](https://plotnine.readthedocs.io/en/stable/) library for visualization :D
+If you're a Python user, stick to the Grammar of Graphics and use the [plotnine](https://plotnine.readthedocs.io/en/stable/) library for visualization :D
+
+### Faceting 
+
+Different categorical x-axes https://stackoverflow.com/questions/45019839/ggplot2-different-facet-width-for-categorical-x-axis 
 
 ### Themes
 
