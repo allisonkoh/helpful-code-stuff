@@ -18,7 +18,9 @@ Preventing scientific notation: https://stackoverflow.com/questions/25946047/how
 
 ## package management 
 
-My preferred package for package management is `pacman`. Before loading in dependencies, put this at the top of the script 
+My current preferred package management workflow involves creating virtual environments with `renv`. 
+
+My (previously) preferred package for package management is `pacman`. Before loading in dependencies, put this at the top of the script 
 
 ```
 if(!require("pacman")) install.packages("pacman")
@@ -225,7 +227,7 @@ showtext_auto() # put at the beginning of a script to automatically show text in
 
 ### geom_bernie()
 
-Instantly improves any plot (or something)
+Add Bernie Sanders to your plots :D because why not 
 
 Install
 
@@ -302,6 +304,32 @@ install.packages("qpdf")
 qpdf::pdf_combine(input = c("file.pdf", "file2.pdf", "file3.pdf"),
                   output = "output.pdf")
 ```
+
+## RSelenium 
+
+Reset port (for error message: Selenium server signals port = 4444 is already in use.)
+https://stackoverflow.com/questions/74708282/rselenium-is-not-working-when-creating-servers
+
+```
+library(qdapRegex)
+
+#clear busy port in windows
+port <- 4444L
+tintern <- system("netstat -a -n -o",intern=T)
+irow1 <- grep(as.character(port),tintern)
+if(length(irow1)>0){
+  irow1 <- irow1[1]
+  if(!is.na(irow1)){
+    irow1 <- irow1[1]
+    trow <- tintern[irow1]
+    trow <- trimws(rm_white(trow))
+    tpid <- word(trow,-1,-1) 
+    system(paste0("taskkill /pid ",tpid," /F"))
+    
+  }
+}
+```
+
 
 # Python
 
