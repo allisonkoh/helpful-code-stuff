@@ -4,11 +4,22 @@
 
 ## General resources 
 
-- A Quarto tip a day by Mine Cetinkaya-Rundel: https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/
+- Docs/first stop for getting started: https://quarto.org/ 
+  - Extensions: https://quarto.org/docs/extensions/listing-revealjs.html 
+  - Presentations (in revealjs): https://quarto.org/docs/presentations/revealjs/  
+  - Advanced reveal: 
+- Getting started
+  - Getting Started with Quarto by Tom Mock (presented at rstudio conf 2022; works as of June 2023) [here](https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations). Source code [here](https://github.com/rstudio-conf-2022/get-started-quarto/blob/main/materials/05-presentations.qmd). 
+- Misc 
+  - A Quarto tip a day by Mine Cetinkaya-Rundel: https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/
 
-## Add in fontawesome icons 
+## Installing extensions  
 
-The `quarto-ext/fontawesome` extension has to be installed with every new project (at least for now). Quick tutorial for this: https://www.youtube.com/watch?v=u8EOVOjX13Y 
+Extensions (e.g. `quarto-ext/fontawesome` for icons) have to be installed with every new project (at least for now). Quick tutorial for this: https://www.youtube.com/watch?v=u8EOVOjX13Y 
+
+## Emojis 
+
+Codes for adding emojis in Markdown here: https://github.com/markdown-templates/markdown-emojis 
 
 # `R`
 
