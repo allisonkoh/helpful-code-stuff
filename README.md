@@ -162,6 +162,17 @@ people <- entities %>%
 
 If you're a Python user, stick to the Grammar of Graphics and use the [plotnine](https://plotnine.readthedocs.io/en/stable/) library for visualization :D
 
+### Heatmap snippet
+
+```
+fig_df |> 
+  ggplot(aes(x = country, y = account_type, fill = n)) + 
+  geom_tile(color = "white") +
+  geom_text(aes(label = n), color = "white", size = 15) + 
+  coord_fixed() + 
+  scale_fill_viridis(end = 0.7)
+```
+
 ### Faceting 
 
 Different categorical x-axes https://stackoverflow.com/questions/45019839/ggplot2-different-facet-width-for-categorical-x-axis 
