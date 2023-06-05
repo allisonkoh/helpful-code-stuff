@@ -7,7 +7,6 @@
 - Docs/first stop for getting started: https://quarto.org/ 
   - Extensions: https://quarto.org/docs/extensions/listing-revealjs.html 
   - Presentations (in revealjs): https://quarto.org/docs/presentations/revealjs/  
-  - Advanced reveal: 
 - Getting started
   - Getting Started with Quarto by Tom Mock (presented at rstudio conf 2022; works as of June 2023) [here](https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations). Source code [here](https://github.com/rstudio-conf-2022/get-started-quarto/blob/main/materials/05-presentations.qmd). 
 - Misc 
@@ -16,6 +15,27 @@
 ## Installing extensions  
 
 Extensions (e.g. `quarto-ext/fontawesome` for icons) have to be installed with every new project (at least for now). Quick tutorial for this: https://www.youtube.com/watch?v=u8EOVOjX13Y 
+
+## Cross-referencing 
+
+Sections https://quarto.org/docs/authoring/cross-references.html#sections 
+
+To reference a section, add a #sec- identifier to any heading. For example:
+
+```
+## Introduction {#sec-introduction}
+```
+
+See @sec-introduction for additional context.
+
+Note that when using section cross-references, you will also need to enable the number-sections option (so that section numbering is visible to readers). For example:
+
+```
+---
+title: "My Document"
+number-sections: true
+---
+```
 
 ## Emojis 
 
