@@ -172,8 +172,8 @@ This is the `theme_set()` that I might use for now.
 
 ```
 # add fonts (this might not be a necessary step)
-font_add_google(name = "Fira Sans", family = "fira")
-font_add_google(name = "Roboto", family = "roboto")
+showtext::font_add_google(name = "Fira Sans", family = "fira")
+showtext::font_add_google(name = "Roboto", family = "roboto")
 
 # themes and text defaults
 theme_set(
